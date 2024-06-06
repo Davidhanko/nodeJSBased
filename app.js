@@ -6,6 +6,7 @@ http.createServer(function (req, res) {
     let q = url.parse(req.url, true);
     let filename = q.pathname;
     switch(filename){
+        case "/":
         case "/index.html":
         {
             fs.readFile('index.html', function (err, data){
